@@ -3,16 +3,23 @@ import 'source-map-support/register'
 import * as cdk from 'aws-cdk-lib'
 import { EcsRunTaskDemoStack } from '../lib/ecs-run-task-demo-stack'
 
+const {
+  CDK_DEFAULT_ACCOUNT,
+  CDK_DEFAULT_REGION,
+  AWS_DEFAULT_ACCOUNT_ID,
+  AWS_DEFAULT_REGION,
+} = process.env
+
+const account = CDK_DEFAULT_ACCOUNT || AWS_DEFAULT_ACCOUNT_ID
+const region = CDK_DEFAULT_REGION || AWS_DEFAULT_REGION
+
 const app = new cdk.App()
+
 new EcsRunTaskDemoStack(app, 'EcsRunTaskDemoStack', {
-  /* If you don't specify 'env', this stack will be environment-agnostic.
-   * Account/Region-dependent features and context lookups will not work,
-   * but a single synthesized template can be deployed anywhere. */
-  /* Uncomment the next line to specialize this stack for the AWS Account
-   * and Region that are implied by the current CLI configuration. */
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
-  /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+  description:
+    'This is a stack to demo how to create an ECS task with AWS CDK and run it via the AWS CLI ecs run-task command.',
+  env: {
+    account,
+    region,
+  },
 })
