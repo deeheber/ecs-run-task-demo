@@ -24,6 +24,7 @@ export class EcsRunTaskDemoStack extends Stack {
     })
 
     taskDefition.addContainer(`${this.id}-Container`, {
+      // TODO Replace this with your desired container image
       image: ContainerImage.fromRegistry('hello-world'),
       logging: LogDrivers.awsLogs({
         streamPrefix: `${this.id}-LogStream`,

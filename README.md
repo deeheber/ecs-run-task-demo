@@ -8,6 +8,10 @@ This is great for when you have ad-hoc jobs that need to be run on demand for bi
 
 This example repo shows how to run the deployed task via the AWS CLI; however, you can invoke `ecs run-task` in different ways if you prefer such as the AWS Console, EventBridge etc.
 
+The sample script runs the task in the AWS account's default ECS cluster, but you can change the script to have it run in a different cluster.
+
+You will also likely want to change the container image to yours since this example pulls the "hello world" script from DockerHub.
+
 ## Quickstart
 
 ### Prerequisites
