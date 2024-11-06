@@ -25,7 +25,8 @@ You will also likely want to change the container image to yours since this exam
 2. `npm install`
 3. `npm run deploy` to deploy to your AWS account
 4. `./scripts/run-task.sh` once deployed to run the task on demand
+5. View logs of task run in the `EcsRunTaskDemoStack-logs` [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) log group
 
 ## Cleanup
 
-If you want to delete the resources created by this project, run `npm run destroy`.
+To delete the resources created by this project, run `npm run destroy`.
