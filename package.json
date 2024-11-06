@@ -7,7 +7,6 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
     "cdk": "cdk",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "clean": "rm -rf dist",
@@ -15,12 +14,9 @@
     "destroy": "npm run cdk destroy -- --all"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
     "@types/node": "22.7.9",
     "aws-cdk": "2.165.0",
-    "jest": "^29.7.0",
     "prettier": "^3.3.3",
-    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.3"
   },
