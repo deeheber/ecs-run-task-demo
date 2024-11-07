@@ -1,5 +1,7 @@
 # ecs-run-task-demo
 
+There's a [companion blog post](https://danielleheberling.xyz/blog/ecs-run-task/ that goes along with this repo in case you haven't seen it yet.
+
 This repo contains sample code to spin up an ECS Fargate task definition that can run on-demand via [ECS run-task](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html).
 
 Once the container is finished running the code, it will spin back down to zero.
