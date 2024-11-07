@@ -10,7 +10,7 @@ This example repo shows how to run the deployed task via the AWS CLI; however, y
 
 The sample script runs the task in the AWS account's default ECS cluster, but you can change the script to have it run in a different cluster.
 
-You will also likely want to change the container image to yours since this example pulls the "hello world" script from DockerHub.
+You will also likely want to change the container image to yours since this example pulls the "hello world" image from DockerHub.
 
 ## Quickstart
 
@@ -25,7 +25,7 @@ You will also likely want to change the container image to yours since this exam
 2. `npm install`
 3. `npm run deploy` to deploy to your AWS account
 4. `./scripts/run-task.sh` once deployed to run the task on demand
-5. View logs of task run in the `EcsRunTaskDemoStack-logs` [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) log group
+5. View logs of task run in the `EcsRunTaskDemoStack-logs` [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) log group to ensure it ran
 
 ## Cleanup
 
